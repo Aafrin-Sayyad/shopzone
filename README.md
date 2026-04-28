@@ -134,7 +134,7 @@ npm run dev
 
 ## 📸 Demo
 
-👉 (Add your deployed Vercel link here)
+👉 (https://vercel.com/sayyad-aafrins-projects/shopzone-7zzc/ApvBCXHkYmoS6ZqZ7DTHjvxmwLYY)
 👉 (Add your demo video link here)
 
 ---
