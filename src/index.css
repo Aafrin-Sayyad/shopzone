@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&display=swap');
+
+:root {
+  --cream: #f5f0e8;
+  --parchment: #ede8dc;
+  --ink: #1a1209;
+  --sepia: #5c4a2a;
+  --gold: #b8942a;
+  --gold-light: #d4af5a;
+  --rust: #8b3a2a;
+  --sage: #4a5c3a;
+  --border: #c8b89a;
+  --shadow: rgba(26, 18, 9, 0.15);
+  --font-serif: 'Times New Roman', 'IM Fell English', Georgia, serif;
+  --font-sc: 'IM Fell English SC', 'Times New Roman', Georgia, serif;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-serif);
+  background-color: var(--cream);
+  color: var(--ink);
+  line-height: 1.7;
+  min-height: 100vh;
+  background-image: 
+    radial-gradient(ellipse at 10% 20%, rgba(184,148,42,0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 90% 80%, rgba(139,58,42,0.05) 0%, transparent 50%);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--parchment); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--sepia); }
+
+/* Page wrapper */
+.page-wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Decorative divider */
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 2rem 0;
+  color: var(--gold);
+  font-size: 1.2rem;
+  letter-spacing: 0.3em;
+}
+.divider::before, .divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--border), transparent);
+}
+
+/* Buttons */
+.btn {
+  font-family: var(--font-sc);
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  padding: 0.75rem 2rem;
+  border: 1.5px solid var(--ink);
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+  transition: all 0.25s ease;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+}
+.btn:hover {
+  background: var(--ink);
+  color: var(--cream);
+}
+.btn-gold {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--cream);
+}
+.btn-gold:hover {
+  background: var(--sepia);
+  border-color: var(--sepia);
+  color: var(--cream);
+}
+.btn-danger {
+  border-color: var(--rust);
+  color: var(--rust);
+}
+.btn-danger:hover {
+  background: var(--rust);
+  color: var(--cream);
+}
+
+/* Loading state */
+.loading-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  gap: 1.5rem;
+}
+.loading-ornament {
+  font-size: 2.5rem;
+  color: var(--gold);
+  animation: spin 3s linear infinite;
+}
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.loading-text {
+  font-family: var(--font-sc);
+  letter-spacing: 0.3em;
+  color: var(--sepia);
+  font-size: 0.9rem;
+}
+
+/* Error state */
+.error-box {
+  text-align: center;
+  padding: 3rem;
+  border: 1px solid var(--rust);
+  margin: 3rem auto;
+  max-width: 500px;
+  color: var(--rust);
+  font-family: var(--font-sc);
+  letter-spacing: 0.1em;
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.fade-in {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+/* Toast notification */
+.toast {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: var(--ink);
+  color: var(--cream);
+  padding: 1rem 1.75rem;
+  font-family: var(--font-sc);
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  z-index: 9999;
+  border-left: 3px solid var(--gold);
+  animation: slideIn 0.3s ease, fadeOut 0.4s ease 2.6s forwards;
+}
+@keyframes slideIn {
+  from { transform: translateX(120%); }
+  to { transform: translateX(0); }
+}
+@keyframes fadeOut {
+  to { opacity: 0; transform: translateX(120%); }
+}
+
+/* Form elements */
+input, textarea, select {
+  font-family: var(--font-serif);
+  background: var(--parchment);
+  border: 1px solid var(--border);
+  padding: 0.75rem 1rem;
+  width: 100%;
+  color: var(--ink);
+  outline: none;
+  transition: border-color 0.2s;
+  font-size: 1rem;
+}
+input:focus, textarea:focus, select:focus {
+  border-color: var(--gold);
+}
+label {
+  font-family: var(--font-sc);
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  color: var(--sepia);
+  display: block;
+  margin-bottom: 0.4rem;
+}
+.form-group {
+  margin-bottom: 1.5rem;
+}

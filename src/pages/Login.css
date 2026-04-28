@@ -1,0 +1,76 @@
+.login-page {
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, var(--cream) 0%, var(--parchment) 100%);
+}
+
+.login-box {
+  background: var(--parchment);
+  border: 1px solid var(--border);
+  padding: 3.5rem;
+  max-width: 420px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 24px 64px var(--shadow);
+}
+
+.login-ornament {
+  font-size: 2rem;
+  color: var(--gold);
+  margin-bottom: 1.5rem;
+}
+
+.login-title {
+  font-family: 'Times New Roman', Georgia, serif;
+  font-size: 2.2rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+
+.login-sub {
+  color: var(--sepia);
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
+.login-form { text-align: left; margin-top: 1.5rem; }
+
+.login-btn {
+  width: 100%;
+  text-align: center;
+  padding: 0.9rem;
+}
+
+.login-divider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1.5rem 0;
+  color: var(--sepia);
+  font-family: var(--font-sc);
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+}
+.login-divider::before, .login-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+.guest-btn {
+  width: 100%;
+  text-align: center;
+}
+
+.login-note {
+  font-size: 0.8rem;
+  color: var(--sepia);
+  opacity: 0.6;
+  margin-top: 2rem;
+  line-height: 1.7;
+  font-style: italic;
+}
