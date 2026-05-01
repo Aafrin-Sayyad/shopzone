@@ -1,5 +1,11 @@
 # 🛒 ShopZone – E-Commerce Single Page Application
+---
+## 📸 Demo
 
+👉 Vercel deploy Link: [(https://shopzone-rouge.vercel.app/)]
+
+
+---
 ## 📌 Overview
 
 ShopZone is a React-based Single Page Application (SPA) that simulates a modern e-commerce website. Users can browse products, view detailed information, and manage their shopping cart seamlessly without page reloads.
@@ -132,13 +138,6 @@ npm run dev
 
 ---
 
-## 📸 Demo
-
-👉 Vercel deploy Link: [(https://vercel.com/sayyad-aafrins-projects/shopzone-7zzc/ApvBCXHkYmoS6ZqZ7DTHjvxmwLYY)]
-
-👉 (Add your demo video link here)
-
----
 
 ## 📌 Important Notes
 
